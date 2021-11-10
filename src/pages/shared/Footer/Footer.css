@@ -1,0 +1,13 @@
+.menu a {
+  border-bottom: 1px solid ghostwhite;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+}
+.footer-container {
+  background-color: #039daf;
+}
+.contact {
+  color: rgb(221, 224, 226);
+}
