@@ -1,12 +1,9 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
-import "./Product.css";
 import { Link } from "react-router-dom";
-
-const Product = (props) => {
+const MoreProduct = (props) => {
   const { name, img, description, rating, price, newProduct, _id } =
     props.product;
-
   return (
     <div class="col">
       <div class="card">
@@ -42,4 +39,4 @@ const Product = (props) => {
   );
 };
 
-export default Product;
+export default MoreProduct;

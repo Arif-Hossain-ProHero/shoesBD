@@ -1,6 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+  const handleLogout = () => {
+    logOut();
+  };
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,24 +28,12 @@ const Navbar = () => {
             </a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <Link to="/" class="nav-link active">
                   Home
-                </a>
+                </Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Disabled
-                </a>
+                <Link to="/more-products">Explore More</Link>
               </li>
             </ul>
             <form class="d-flex">
@@ -52,6 +46,11 @@ const Navbar = () => {
               <button class="btn btn-outline-success" type="submit">
                 Search
               </button>
+              {user?.email ? (
+                <button onClick={handleLogout}>Logout</button>
+              ) : (
+                <Link to="/login">Login</Link>
+              )}
             </form>
           </div>
         </div>
