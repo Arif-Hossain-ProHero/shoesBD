@@ -22,6 +22,9 @@ import UserReview from "../UserReview/UserReview";
 import Dashboard from "../Dashboard/Dashboard";
 import Pay from "../Pay/Pay";
 import MyOrders from "../MyOrders/MyOrders";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import useAuth from "../../../hooks/useAuth";
+import AdminRoute from "../../AdminRoute/AdminRoute";
 
 const drawerWidth = 240;
 
@@ -29,27 +32,11 @@ function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
+  const { admin } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  // const drawer = (
-  //   <div>
-  //     <Toolbar />
-  //     <Divider />
-  //     <List>
-  //       {["Home", "Pay", "My Orders", "Review", "Logout"].map((text, index) => (
-  //         <ListItem button key={text}>
-  //           <ListItemIcon>
-  //             {index % 2 === 0 ? <HomeIcon /> : <PaymentIcon />}
-  //           </ListItemIcon>
-  //           <ListItemText primary={text} />
-  //         </ListItem>
-  //       ))}
-  //     </List>
-  //   </div>
-  // );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
@@ -128,6 +115,7 @@ function ResponsiveDrawer(props) {
                 <i class="fas fa-home"></i>Home
               </Link>
             </Typography>
+
             <Typography>
               <Link to={`${url}/pay`}>
                 <i class="fas fa-credit-card"></i>Pay
@@ -143,6 +131,14 @@ function ResponsiveDrawer(props) {
                 <i class="far fa-star"></i>Review
               </Link>
             </Typography>
+
+            {admin && (
+              <Box>
+                <Typography>
+                  <Link to={`${url}/make-admin`}>Make Admin</Link>
+                </Typography>
+              </Box>
+            )}
             <Typography>
               <i class="fas fa-sign-out-alt"></i>LogOut
             </Typography>
@@ -168,6 +164,9 @@ function ResponsiveDrawer(props) {
           <Route path={`${path}/pay`}>
             <Pay></Pay>
           </Route>
+          <AdminRoute path={`${path}/make-admin`}>
+            <MakeAdmin></MakeAdmin>
+          </AdminRoute>
         </Switch>
       </Box>
     </Box>
