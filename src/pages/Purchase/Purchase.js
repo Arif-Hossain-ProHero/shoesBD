@@ -1,11 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router";
+import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
 
 const Purchase = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const { user } = useAuth();
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const priceRef = useRef();
+  const titleRef = useRef();
+  const dateRef = useRef();
+  const addressRef = useRef();
+  const phoneRef = useRef();
+
   useEffect(() => {
     const url = `http://localhost:5000/products/${id}`;
     fetch(url)
@@ -15,6 +25,46 @@ const Purchase = () => {
         setProduct(data);
       });
   }, []);
+
+  const handleSubmit = (e) => {
+    const packageId = id;
+    const userName = nameRef.current.value;
+    const userEmail = emailRef.current.value;
+    const title = titleRef.current.value;
+    const price = priceRef.current.value;
+    const address = addressRef.current.value;
+    const date = dateRef.current.value;
+    const phone = phoneRef.current.value;
+    const orderDetail = {
+      packageId,
+      userName,
+      userEmail,
+      title,
+      price,
+      address,
+      date,
+      phone,
+      status: "pending",
+    };
+    console.log(orderDetail);
+    const url = "http://localhost:5000/orders";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderDetail),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          alert("Order Placed Successfully");
+          e.target.reset();
+        }
+      });
+    e.preventDefault();
+  };
+
   return (
     <div>
       <Navbar></Navbar>
@@ -22,7 +72,7 @@ const Purchase = () => {
         <h2 className="text-center mb-5">ORDER NOW</h2>
         <div className="d-flex flex-md-row flex-column">
           <div className="w-50">
-            <form>
+            <form onSubmit={handleSubmit}>
               {/* user name */}
               <div className="mb-3">
                 <label
@@ -35,8 +85,9 @@ const Purchase = () => {
                   type="text"
                   className="form-control"
                   name="useName"
+                  defaultValue={user.displayName}
                   id="exampleFormControlInput1"
-                  // value={user.displayName || ""}
+                  ref={nameRef}
                   readOnly
                 />
               </div>
@@ -51,9 +102,10 @@ const Purchase = () => {
                 <input
                   type="email"
                   name="email"
+                  defaultValue={user.email}
                   className="form-control"
                   id="exampleFormControlInput1"
-                  // value={user.email || ""}
+                  ref={emailRef}
                   readOnly
                 />
               </div>
@@ -71,6 +123,8 @@ const Purchase = () => {
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Address"
+                  ref={addressRef}
+                  required
                 />
               </div>
               {/* phone */}
@@ -87,6 +141,8 @@ const Purchase = () => {
                   name="phone"
                   id="exampleFormControlInput1"
                   placeholder="Phone Number"
+                  ref={phoneRef}
+                  required
                 />
               </div>
               {/* date */}
@@ -103,6 +159,8 @@ const Purchase = () => {
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Date"
+                  ref={dateRef}
+                  required
                 />
               </div>
               {/* pacakge title */}
@@ -120,6 +178,7 @@ const Purchase = () => {
                   id="exampleFormControlInput1"
                   value={product.name || ""}
                   readOnly
+                  ref={titleRef}
                 />
               </div>
               {/* price */}
@@ -137,6 +196,7 @@ const Purchase = () => {
                   id="exampleFormControlInput1"
                   value={product.price || ""}
                   readOnly
+                  ref={priceRef}
                 />
               </div>
               <input

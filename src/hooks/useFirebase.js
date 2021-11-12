@@ -22,14 +22,14 @@ const useFirebase = () => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        setUser(result.user);
-        // const newUser = { email, displayName: name };
-        // setUser(newUser);
-        // updateProfile(auth.currentUser, {
-        //   displayName: name,
-        // })
-        //   .then(() => {})
-        //   .catch((error) => {});
+        const newUser = { email, displayName: name };
+        setUser(newUser);
+        saveUser(email, name);
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {})
+          .catch((error) => {});
         history.replace("/");
       })
       .catch((error) => {
@@ -66,6 +66,23 @@ const useFirebase = () => {
     });
     return () => unSubscribe;
   }, []);
+
+  //Save users
+  const saveUser = (email, name) => {
+    const newUser = {
+      email: email,
+      displayName: name,
+    };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((res) => res.json())
+      .catch((error) => {});
+  };
 
   //logout
   const logOut = () => {

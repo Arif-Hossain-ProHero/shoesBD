@@ -46,6 +46,9 @@ const Navbar = () => {
               <button class="btn btn-outline-success" type="submit">
                 Search
               </button>
+              <Link to="/dashboard" class="nav-link active">
+                Dashboard
+              </Link>
               {user?.email ? (
                 <button onClick={handleLogout}>Logout</button>
               ) : (
