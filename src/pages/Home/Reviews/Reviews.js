@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Rating from "@mui/material/Rating";
 import Avatar from "@mui/material/Avatar";
+import { Link } from "react-router-dom";
+import "./Reviews.css";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -12,7 +14,8 @@ const Reviews = () => {
       });
   }, []);
   return (
-    <div class="container mx-auto">
+    <div class="container my-5 mx-auto">
+      <h2 className="my-5 text-center">Reviews</h2>
       {reviews.map((rev) => (
         <div class=" mb-3">
           <div class="card d-flex flex-row justify-content-around">
@@ -30,9 +33,10 @@ const Reviews = () => {
               <h5 class="card-title">{rev.headline.toUpperCase()}</h5>
               <small className="muted">Published on: {rev.date}</small>
               <p class="card-text mt-2">{rev.review}</p>
-              <a href="#" class="btn btn-primary">
+
+              <Link to="/read-review" className="btn btn-primary">
                 Read Review
-              </a>
+              </Link>
             </div>
           </div>
         </div>

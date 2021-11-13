@@ -2,72 +2,72 @@
   {
     "name": "NIKE Keds",
     "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
+    "price": 700,
+    "description": "fashionable Sneakers Casual PU sole Shoes for Men( wholesale price)",
     "rating": 4.5,
     "newProduct":true
   },
   {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
+    "name": "Keds with blue color",
+    "img": "https://media.istockphoto.com/photos/running-shoes-picture-id1249496770?b=1&k=20&m=1249496770&s=170667a&w=0&h=_SUv4odBqZIzcXvdK9rqhPBIenbyBspPFiQOSDRi-RI=",
+    "price": 500,
+    "description": "Fashion Breathable Men's Running Shoes Mesh Sneaker Lightweight",
+    "rating": 4
+  },
+  {
+    "name": "Huaraches",
+    "img": "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+    "price": 550,
+    "description": "Fashion Breathable Men's Running Shoes Mesh Sneaker Lightweight",
+    "rating": 3.5
+  },
+  {
+    "name": "Boots",
+    "img": "https://images.dsw.com/is/image/DSWShoes/443190_100_ss_03?impolicy=qlt-medium-high&imwidth=640&imdensity=1",
     "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
+    "description": "Free shipping and returns on women's boots at Nordstrom.com, including booties, riding, knee-high boots and rain boots",
+    "rating": 4.1
+  },
+  {
+    "name": "Ugg Boots",
+    "img": "https://media.glamour.com/photos/5ffca6d8554f2994141f2222/3:2/w_1200,h_800,c_limit/uggs%20river.jpg",
+    "price": 800,
+    "description": "Ugg boots are a unisex style of sheepskin boot originating in Australia. The boots are typically made of twin-faced sheepskin with fleece on the insid",
+    "rating": 3
+  },
+  {
+    "name": "Crocs",
+    "img": "https://www.efootwear.eu/media/catalog/product/cache/image/650x650/0/0/0000208426701_01_rz.jpg",
+    "price": 1500,
+    "description": "As light hearted as they are lightweight, Crocs footwear provides complete comfort and support for any occasion and every season",
     "rating": 4.5
   },
   {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
+    "name": "Men's Sneakers",
+    "img": "https://static-01.daraz.com.bd/p/5d711f21c400390c4cad579381f3e38f.jpg",
+    "price": 200,
+    "description": "Trendy Shoes For Man With High Quality Fabrics And Breathable",
+    "rating": 5
+  },
+  {
+    "name": "Black Sneaker",
+    "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sneaker-index-1587142381.jpg?crop=0.502xw:1.00xh;0.498xw,0&resize=640:*",
+    "price": 400,
+    "description": "Black Cotton Fabrics Sneaker Shoes Slip-Ons & Loafers for Men",
     "rating": 4.5
   },
   {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
+    "name": "Lotto",
+    "img": "https://lotto.expressleather.com.bd/wp-content/uploads/2021/03/Lotto-Sports-Shoes_8010288@2690-1.jpg",
+    "price": 500,
+    "description": "Lotto boots are a unisex style of sheepskin boot originating in Australia. The boots are typically",
+    "rating": 2.5
   },
   {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
-  },
-  {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
-  },
-  {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
-  },
-  {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
-  },
-  {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
-    "rating": 4.5
-  },
-  {
-    "name": "NIKE Keds",
-    "img": "https://media.istockphoto.com/photos/white-sneaker-on-a-blue-gradient-background-mens-fashion-sport-shoe-picture-id1303978937?b=1&k=20&m=1303978937&s=170667a&w=0&h=az5Y96agxAdHt3XAv7PP9pThdiDpcQ3otWWn9YuJQRc=",
-    "price": 1500,
-    "description": "lorem lorem lorem loremler, fdsajf lkasdfj j kljkfjkjsad adsfjj",
+    "name": "Bata shoe",
+    "img": "https://www.looksgud.in/upload/item-image/849/i7bd/i7bd-bata-men-s-sa-05-formal-shoes_500x500_0.jpg",
+    "price": 600,
+    "description": "Black Cotton Fabrics BATA Sneaker Shoes Slip-Ons & Loafers for Men",
     "rating": 4.5
   }
 ]

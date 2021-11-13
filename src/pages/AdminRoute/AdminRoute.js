@@ -6,6 +6,7 @@ const AdminRoute = ({ children, ...rest }) => {
   const { admin, user, isLoading } = useAuth();
 
   if (isLoading) {
+    console.log(isLoading);
     return (
       <div className="d-flex justify-content-center my-24">
         <div className="spinner-border" role="status">

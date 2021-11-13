@@ -1,0 +1,10 @@
+.logo img {
+  height: 70px;
+  width: 130px;
+}
+.nav-item {
+  text-decoration: none;
+}
+.logout-btn {
+  border: none;
+}

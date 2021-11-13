@@ -1,0 +1,12 @@
+.carousel-img {
+  max-height: 400px;
+}
+.carousel-bg {
+  background-color: coral;
+}
+.carousel-bg-3 {
+  background-color: rgb(9, 121, 141);
+}
+* {
+  box-sizing: border-box;
+}

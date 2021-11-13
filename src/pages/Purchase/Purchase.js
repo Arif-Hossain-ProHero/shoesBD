@@ -200,7 +200,7 @@ const Purchase = () => {
                 />
               </div>
               <input
-                className="regular-btn border-0 p-2 rounded"
+                className="btn btn-primary"
                 type="submit"
                 value="Place Order"
               />
@@ -210,7 +210,7 @@ const Purchase = () => {
             {/* <h2>PACKAGE DETAILS</h2> */}
             <img className="img-fluid" src={product.img} alt="" />
             <h4 className="mt-2">
-              <span className="text-success">Package Name:</span> {product.name}
+              <span className="text-success">Shoe Name:</span> {product.name}
             </h4>
             <p>{product.description}</p>
             <h5>

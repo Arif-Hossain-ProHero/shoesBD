@@ -12,20 +12,22 @@ const Product = (props) => {
       <div class="card">
         <img src={img} class="card-img-top card-img" alt="..." />
         <div class="middle">
-          <div class="text">Shoe</div>
+          <div title="Add to Wish list" class="text">
+            <i class="fas fa-heart"></i>
+          </div>
         </div>
-        {/* new produc */}
+        {/* new product */}
         {newProduct && (
           <div class="text-block">
             <p>NEW</p>
           </div>
         )}
-        <div class="card-body">
+        <div class="card-body text-center">
           <h5 class="card-title">{name}</h5>
-          <p class="card-text">{description}</p>
+          <p class="card-text">{description.slice(0, 40)}...</p>
         </div>
         <div>
-          <div class="price">
+          <div class="price text-center">
             <h3 class="fw-bold">${price}</h3>
             <Rating name="read-only" value={rating} precision={0.5} readOnly />
           </div>

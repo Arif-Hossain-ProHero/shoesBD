@@ -87,11 +87,13 @@ const useFirebase = () => {
 
   //check isAdmin
   useEffect(() => {
+    setIsLoading(true);
     fetch(`http://localhost:5000/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);
         console.log(data);
+        setIsLoading(false);
       });
   }, [user?.email]);
 

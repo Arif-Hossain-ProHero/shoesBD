@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -34,72 +36,79 @@ const Header = () => {
           {/* first item */}
           <div class="carousel-item active">
             <div class="container-fluid mx-auto">
-              <div class="row row-cols-2">
+              <div class="row row-cols-2  carousel-bg">
                 <div class="col">
                   <img
-                    className="img-fluid"
+                    className="img-fluid carousel-img"
                     src="https://img.freepik.com/free-photo/colorful-slip-unisex-streetwear-sneakers-fashion_53876-101518.jpg?size=626&ext=jpg"
                     alt=""
                   />
                 </div>
                 <div class="col">
-                  <h1>20% OFF for Today</h1>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Esse assumenda quas pariatur ut inventore laudantium magni
-                    necessitatibus perferendis aliquid hic officia incidunt,
-                    accusantium commodi recusandae molestiae similique
-                    consequatur id maiores.
-                  </p>
-                  <button>Explore More</button>
+                  <div class="my-4 text-center">
+                    <h1 class="fw-bold fs-1 text-warning mb-3">MEGA OFFER</h1>
+                    <h3>20% OFF for Today</h3>
+                    <h3 className=" my-3">
+                      ONLY ON <span class="text-danger">SHOESBD</span>
+                    </h3>
+                  </div>
+                  <div class="text-center">
+                    <Link to="/more-products">
+                      <button class="btn btn-primary">More Products</button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="container-fluid mx-auto">
-              <div class="row row-cols-2">
+              <div class="row row-cols-2  carousel-bg">
                 <div class="col">
                   <img
-                    className="img-fluid"
-                    src="https://img.freepik.com/free-photo/colorful-slip-unisex-streetwear-sneakers-fashion_53876-101518.jpg?size=626&ext=jpg"
+                    className="img-fluid carousel-img"
+                    src="https://xeroshoes.com/wp-content/themes/xeroshoes/assets/images/menu/xero-shoes-PRM-LNR_Prio-Lunar_LS.jpg"
                     alt=""
                   />
                 </div>
                 <div class="col">
-                  <h1>20% OFF for Today</h1>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Esse assumenda quas pariatur ut inventore laudantium magni
-                    necessitatibus perferendis aliquid hic officia incidunt,
-                    accusantium commodi recusandae molestiae similique
-                    consequatur id maiores.
-                  </p>
-                  <button>Explore More</button>
+                  <div class="my-4 text-center">
+                    <h1 class="fw-bold fs-1 text-warning mb-3">MEGA OFFER</h1>
+                    <h3>20% OFF for Today</h3>
+                    <h3 className=" my-3">
+                      ONLY ON <span class="text-danger">SHOESBD</span>
+                    </h3>
+                  </div>
+                  <div class="text-center">
+                    <Link to="/more-products">
+                      <button class="btn btn-primary">More Products</button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="container-fluid mx-auto">
-              <div class="row row-cols-2">
+              <div class="row row-cols-2  carousel-bg-3">
                 <div class="col">
                   <img
-                    className="img-fluid"
-                    src="https://img.freepik.com/free-photo/colorful-slip-unisex-streetwear-sneakers-fashion_53876-101518.jpg?size=626&ext=jpg"
+                    className="img-fluid carousel-img"
+                    src="https://houseofheat.co/app/uploads/2020/05/nike-adapt-auto-max-infrared-ci5018-002-release-date-info-1.jpg"
                     alt=""
                   />
                 </div>
                 <div class="col">
-                  <h1>20% OFF for Today</h1>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Esse assumenda quas pariatur ut inventore laudantium magni
-                    necessitatibus perferendis aliquid hic officia incidunt,
-                    accusantium commodi recusandae molestiae similique
-                    consequatur id maiores.
-                  </p>
-                  <button>Explore More</button>
+                  <div class="my-5 text-white">
+                    <h1>
+                      KEEP MOVIENG WITH{" "}
+                      <span class="text-warning">SHOESBD</span>
+                    </h1>
+                    <h2 class="my-4">
+                      WE OFFER <span class="text-dark">EXCLUSIVE</span> SHOE
+                      COLLECTION
+                    </h2>
+                  </div>
                 </div>
               </div>
             </div>

@@ -25,6 +25,9 @@ import MyOrders from "../MyOrders/MyOrders";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import useAuth from "../../../hooks/useAuth";
 import AdminRoute from "../../AdminRoute/AdminRoute";
+import AddProduct from "../AddProduct/AddProduct";
+import ManageProducts from "../ManageProducts/ManageProducts";
+import ManageOrders from "../ManageOrders/ManageOrders";
 
 const drawerWidth = 240;
 
@@ -115,27 +118,39 @@ function ResponsiveDrawer(props) {
                 <i class="fas fa-home"></i>Home
               </Link>
             </Typography>
-
-            <Typography>
-              <Link to={`${url}/pay`}>
-                <i class="fas fa-credit-card"></i>Pay
-              </Link>
-            </Typography>
-            <Typography>
-              <Link to={`${url}/my-orders`}>
-                <i class="fas fa-shopping-bag"></i>My Orders
-              </Link>
-            </Typography>
-            <Typography>
-              <Link to={`${url}/review`}>
-                <i class="far fa-star"></i>Review
-              </Link>
-            </Typography>
+            {admin || (
+              <Box>
+                <Typography>
+                  <Link to={`${url}/pay`}>
+                    <i class="fas fa-credit-card"></i>Pay
+                  </Link>
+                </Typography>
+                <Typography>
+                  <Link to={`${url}/my-orders`}>
+                    <i class="fas fa-shopping-bag"></i>My Orders
+                  </Link>
+                </Typography>
+                <Typography>
+                  <Link to={`${url}/review`}>
+                    <i class="far fa-star"></i>Review
+                  </Link>
+                </Typography>
+              </Box>
+            )}
 
             {admin && (
               <Box>
                 <Typography>
                   <Link to={`${url}/make-admin`}>Make Admin</Link>
+                </Typography>
+                <Typography>
+                  <Link to={`${url}/add-product`}>Add Product</Link>
+                </Typography>
+                <Typography>
+                  <Link to={`${url}/manage-products`}>Manage Products</Link>
+                </Typography>
+                <Typography>
+                  <Link to={`${url}/manage-orders`}>Manage Orders</Link>
                 </Typography>
               </Box>
             )}
@@ -167,6 +182,15 @@ function ResponsiveDrawer(props) {
           <AdminRoute path={`${path}/make-admin`}>
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
+          <AdminRoute path={`${path}/add-product`}>
+            <AddProduct></AddProduct>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manage-products`}>
+            <ManageProducts></ManageProducts>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manage-orders`}>
+            <ManageOrders></ManageOrders>
+          </AdminRoute>
         </Switch>
       </Box>
     </Box>
@@ -174,10 +198,6 @@ function ResponsiveDrawer(props) {
 }
 
 ResponsiveDrawer.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window: PropTypes.func,
 };
 
