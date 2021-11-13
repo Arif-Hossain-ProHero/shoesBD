@@ -35,7 +35,7 @@ const MyOrders = () => {
   };
   return (
     <div>
-      <h1>My orders</h1>
+      <h1 className="text-center my-5">My orders</h1>
       <table class="table">
         <thead class="table-dark">
           <tr>

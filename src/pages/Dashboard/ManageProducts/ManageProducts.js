@@ -35,7 +35,7 @@ const ManageProducts = () => {
   };
   return (
     <div>
-      <h1>My orders</h1>
+      <h1 class="text-center my-5">Manage Products</h1>
       <table class="table">
         <thead class="table-dark">
           <tr>
@@ -54,7 +54,10 @@ const ManageProducts = () => {
               <td>{product.name}</td>
               <td>${product.price}</td>
               <td>
-                <button onClick={() => handleDelete(product._id)}>
+                <button
+                  class="btn btn-danger"
+                  onClick={() => handleDelete(product._id)}
+                >
                   Delete
                 </button>
               </td>

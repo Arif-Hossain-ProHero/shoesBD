@@ -26,17 +26,21 @@ const MakeAdmin = () => {
   };
   return (
     <div>
+      <h2 class="text-center my-5">Make Admin</h2>
       {success && <Alert severity="success">Email Added Successfully.</Alert>}
-      <form onSubmit={handleOnSubmit}>
-        <input
-          type="email"
-          name="email"
-          class="form-control"
-          onBlur={handleOnBlur}
-          id="exampleFormControlInput1"
-          placeholder="User Name"
-        />
-        <input type="submit" value="Make Admin" />
+      <form className="text-center" onSubmit={handleOnSubmit}>
+        <div className="d-flex flex-row justify-content-center">
+          <input
+            type="email"
+            name="email"
+            class="form-control w-50"
+            onBlur={handleOnBlur}
+            id="exampleFormControlInput1"
+            placeholder="User Email"
+            required
+          />
+          <input className="btn btn-primary" type="submit" value="Make Admin" />
+        </div>
       </form>
     </div>
   );

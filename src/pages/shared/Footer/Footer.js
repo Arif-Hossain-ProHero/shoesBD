@@ -11,21 +11,20 @@ const Footer = () => {
           <h3 className="text-center text-white pb-3">CONTACT</h3>
           <div>
             <p className="text-white">
-              We are the largest and most celebrated network of professional
-              travel agents in North America. Wherever you want to go, however
-              you want to get there, whatever you want to do—we have the ideal
-              travel agent match just for you.
+              We are the largest and most celebrated network of Selling Shoes in
+              Bangldesh. Wherever you want to go, however you want to get there,
+              whatever you want to do—we have the ideal Shoe for you.
             </p>
             <div className="fst-italic contact">
               <address>
-                <i className="fas fa-map-marker-alt pe-2"></i>4th Floor,
-                Mahboob's Building, Mirpur-12
+                <i className="fas fa-map-marker-alt pe-2"></i>6th Floor,
+                Khandarak Market, Mirpur-10
               </address>
               <p>
                 <i className="fas fa-phone-alt pe-2"></i>+880-XXXXXXXXXX
               </p>
               <p>
-                <i className="far fa-envelope pe-2"></i>nice-trip@support.com
+                <i className="far fa-envelope pe-2"></i>shoesbd@support.com
               </p>
             </div>
           </div>

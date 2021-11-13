@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-
+import "./Dashboard.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -15,8 +15,9 @@ import {
   Switch,
   Route,
   Link,
-  useParams,
   useRouteMatch,
+  useHistory,
+  NavLink,
 } from "react-router-dom";
 import UserReview from "../UserReview/UserReview";
 import Dashboard from "../Dashboard/Dashboard";
@@ -28,17 +29,24 @@ import AdminRoute from "../../AdminRoute/AdminRoute";
 import AddProduct from "../AddProduct/AddProduct";
 import ManageProducts from "../ManageProducts/ManageProducts";
 import ManageOrders from "../ManageOrders/ManageOrders";
+import DashboardHome from "../DashboardHome/DashboardHome";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
-  const { admin } = useAuth();
+  const { admin, logOut } = useAuth();
+  const history = useHistory();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+  const handleLogout = (e) => {
+    logOut();
+    history.push("/");
+    e.preventDefault();
   };
 
   const container =
@@ -87,50 +95,34 @@ function ResponsiveDrawer(props) {
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
-              width: drawerWidth,
-              backgroundColor: "red",
+              backgroundColor: "#272953",
+              color: "white",
             },
           }}
         >
           {/* {drawer} */}
           <Toolbar />
           <Divider />
-          khaice
-        </Drawer>
-        <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-              backgroundColor: "blue",
-            },
-          }}
-          open
-        >
-          {/* {drawer} */}
-          <Toolbar />
-          <Divider />
+          {/* mobile */}
           <Box sx={{ marginLeft: "16px" }}>
-            <Typography>
+            <Typography sx={{ mt: 2 }}>
               <Link to="/">
                 <i class="fas fa-home"></i>Home
               </Link>
             </Typography>
             {admin || (
               <Box>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/pay`}>
                     <i class="fas fa-credit-card"></i>Pay
                   </Link>
                 </Typography>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/my-orders`}>
                     <i class="fas fa-shopping-bag"></i>My Orders
                   </Link>
                 </Typography>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/review`}>
                     <i class="far fa-star"></i>Review
                   </Link>
@@ -140,21 +132,91 @@ function ResponsiveDrawer(props) {
 
             {admin && (
               <Box>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/make-admin`}>Make Admin</Link>
                 </Typography>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/add-product`}>Add Product</Link>
                 </Typography>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/manage-products`}>Manage Products</Link>
                 </Typography>
-                <Typography>
+                <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/manage-orders`}>Manage Orders</Link>
                 </Typography>
               </Box>
             )}
-            <Typography>
+            <Typography
+              onClick={handleLogout}
+              sx={{ mt: 2, cursor: "pointer" }}
+            >
+              <i class="fas fa-sign-out-alt"></i>LogOut
+            </Typography>
+          </Box>
+        </Drawer>
+        <Drawer
+          variant="permanent"
+          sx={{
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+              backgroundColor: "#272953",
+              color: "white",
+            },
+          }}
+          open
+        >
+          {/* computer screen */}
+          {/* {drawer} */}
+          <Toolbar />
+          <Divider />
+          <Box sx={{ marginLeft: "16px" }}>
+            <Typography sx={{ mt: 2 }}>
+              <Link to="/">
+                <i class="fas fa-home"></i>Home
+              </Link>
+            </Typography>
+            {admin || (
+              <Box>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/pay`}>
+                    <i class="fas fa-credit-card"></i>Pay
+                  </Link>
+                </Typography>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/my-orders`}>
+                    <i class="fas fa-shopping-bag"></i>My Orders
+                  </Link>
+                </Typography>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/review`}>
+                    <i class="far fa-star"></i>Review
+                  </Link>
+                </Typography>
+              </Box>
+            )}
+
+            {admin && (
+              <Box>
+                <Typography sx={{ mt: 2 }}>
+                  <NavLink to={`${url}/make-admin`}>Make Admin</NavLink>
+                </Typography>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/add-product`}>Add Product</Link>
+                </Typography>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/manage-products`}>Manage Products</Link>
+                </Typography>
+                <Typography sx={{ mt: 2 }}>
+                  <Link to={`${url}/manage-orders`}>Manage Orders</Link>
+                </Typography>
+              </Box>
+            )}
+            <Typography
+              onClick={handleLogout}
+              sx={{ mt: 2, cursor: "pointer" }}
+            >
               <i class="fas fa-sign-out-alt"></i>LogOut
             </Typography>
           </Box>
@@ -170,25 +232,28 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <Switch>
-          <Route path={`${path}/review`}>
+          <Route exact path={`${path}`}>
+            <DashboardHome></DashboardHome>
+          </Route>
+          <Route exact path={`${path}/review`}>
             <UserReview></UserReview>
           </Route>
-          <Route path={`${path}/my-orders`}>
+          <Route exact path={`${path}/my-orders`}>
             <MyOrders></MyOrders>
           </Route>
-          <Route path={`${path}/pay`}>
+          <Route exact path={`${path}/pay`}>
             <Pay></Pay>
           </Route>
-          <AdminRoute path={`${path}/make-admin`}>
+          <AdminRoute exact path={`${path}/make-admin`}>
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
-          <AdminRoute path={`${path}/add-product`}>
+          <AdminRoute exact path={`${path}/add-product`}>
             <AddProduct></AddProduct>
           </AdminRoute>
-          <AdminRoute path={`${path}/manage-products`}>
+          <AdminRoute exact path={`${path}/manage-products`}>
             <ManageProducts></ManageProducts>
           </AdminRoute>
-          <AdminRoute path={`${path}/manage-orders`}>
+          <AdminRoute exact path={`${path}/manage-orders`}>
             <ManageOrders></ManageOrders>
           </AdminRoute>
         </Switch>

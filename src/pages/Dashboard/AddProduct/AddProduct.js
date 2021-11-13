@@ -96,7 +96,7 @@ const AddProduct = () => {
           {/* submit button */}
           <div className="text-center">
             <input
-              className="btn regular-btn"
+              className="btn btn-primary"
               type="submit"
               value="ADD PRODUCT"
             />
