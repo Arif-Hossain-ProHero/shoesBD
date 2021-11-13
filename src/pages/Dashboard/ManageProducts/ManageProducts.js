@@ -6,7 +6,7 @@ const ManageProducts = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const url = `http://localhost:5000/products`;
+    const url = `https://floating-meadow-68096.herokuapp.com/products`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     console.log(id);
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://floating-meadow-68096.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -35,9 +35,9 @@ const ManageProducts = () => {
   };
   return (
     <div>
-      <h1 class="text-center my-5">Manage Products</h1>
-      <table class="table">
-        <thead class="table-dark">
+      <h1 className="text-center my-5">Manage Products</h1>
+      <table className="table">
+        <thead className="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Product Name</th>
@@ -47,7 +47,7 @@ const ManageProducts = () => {
         </thead>
         {/* </table> */}
         {products.map((product, index) => (
-          // <table class="table table-bordered border-primary">
+          // <table className="table table-bordered border-primary">
           <tbody>
             <tr>
               <th scope="row">{index + 1}</th>
@@ -55,7 +55,7 @@ const ManageProducts = () => {
               <td>${product.price}</td>
               <td>
                 <button
-                  class="btn btn-danger"
+                  className="btn btn-danger"
                   onClick={() => handleDelete(product._id)}
                 >
                   Delete

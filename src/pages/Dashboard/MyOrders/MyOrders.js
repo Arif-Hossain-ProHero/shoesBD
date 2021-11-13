@@ -6,7 +6,7 @@ const MyOrders = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders?email=${user?.email}`;
+    const url = `https://floating-meadow-68096.herokuapp.com/orders?email=${user?.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -19,7 +19,7 @@ const MyOrders = () => {
     console.log(id);
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://floating-meadow-68096.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -36,8 +36,8 @@ const MyOrders = () => {
   return (
     <div>
       <h1 className="text-center my-5">My orders</h1>
-      <table class="table">
-        <thead class="table-dark">
+      <table className="table">
+        <thead className="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Product Name</th>
@@ -48,7 +48,7 @@ const MyOrders = () => {
         </thead>
         {/* </table> */}
         {myOrders.map((order, index) => (
-          // <table class="table table-bordered border-primary">
+          // <table className="table table-bordered border-primary">
           <tbody>
             <tr>
               <th scope="row">{index + 1}</th>

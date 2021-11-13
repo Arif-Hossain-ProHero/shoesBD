@@ -9,9 +9,7 @@ const DashboardHome = () => {
         <div>
           <h3>
             Hi,
-            <span className="text-warning">
-              {user.displayName.toUpperCase()}
-            </span>
+            <span className="text-warning"> {user.displayName}</span>
           </h3>
           <p>
             As you are admin you can Manage product, Users, Orders and Add
@@ -23,9 +21,7 @@ const DashboardHome = () => {
         <div>
           <h3>
             Hi,
-            <span className="text-warning">
-              {user.displayName.toUpperCase()}
-            </span>
+            <span className="text-warning">{user.displayName}</span>
           </h3>
           <p>
             As you are a user you can Add Review, Manage Your Orders and Pay

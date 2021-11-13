@@ -16,7 +16,7 @@ const UserReview = () => {
   };
   const handleSubmit = (e) => {
     const newReview = { ...reviewDetail, date, name: user.displayName };
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://floating-meadow-68096.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -36,25 +36,25 @@ const UserReview = () => {
     <div>
       <h1 className="text-center">Review</h1>
       <form className="mx-auto w-75" onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Review Headline
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
             name="headline"
             onBlur={handleOnBlur}
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlTextarea1" className="form-label">
             Leave your review here
           </label>
           <textarea
-            class="form-control"
+            className="form-control"
             id="exampleFormControlTextarea1"
             rows="3"
             name="review"
@@ -62,13 +62,13 @@ const UserReview = () => {
             onBlur={handleOnBlur}
           ></textarea>
         </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+        <div className="mb-3">
+          <label for="exampleFormControlInput1" className="form-label">
             Give Rating
           </label>
           <input
             type="number"
-            class="form-control"
+            className="form-control"
             id="exampleFormControlInput1"
             required
             min="0"

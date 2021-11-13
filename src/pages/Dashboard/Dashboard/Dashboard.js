@@ -20,7 +20,6 @@ import {
   NavLink,
 } from "react-router-dom";
 import UserReview from "../UserReview/UserReview";
-import Dashboard from "../Dashboard/Dashboard";
 import Pay from "../Pay/Pay";
 import MyOrders from "../MyOrders/MyOrders";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
@@ -107,24 +106,24 @@ function ResponsiveDrawer(props) {
           <Box sx={{ marginLeft: "16px" }}>
             <Typography sx={{ mt: 2 }}>
               <Link to="/">
-                <i class="fas fa-home"></i>Home
+                <i className="fas fa-home"></i>Home
               </Link>
             </Typography>
             {admin || (
               <Box>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/pay`}>
-                    <i class="fas fa-credit-card"></i>Pay
+                    <i className="fas fa-credit-card"></i>Pay
                   </Link>
                 </Typography>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/my-orders`}>
-                    <i class="fas fa-shopping-bag"></i>My Orders
+                    <i className="fas fa-shopping-bag"></i>My Orders
                   </Link>
                 </Typography>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/review`}>
-                    <i class="far fa-star"></i>Review
+                    <i className="far fa-star"></i>Review
                   </Link>
                 </Typography>
               </Box>
@@ -150,7 +149,7 @@ function ResponsiveDrawer(props) {
               onClick={handleLogout}
               sx={{ mt: 2, cursor: "pointer" }}
             >
-              <i class="fas fa-sign-out-alt"></i>LogOut
+              <i className="fas fa-sign-out-alt"></i>LogOut
             </Typography>
           </Box>
         </Drawer>
@@ -174,24 +173,24 @@ function ResponsiveDrawer(props) {
           <Box sx={{ marginLeft: "16px" }}>
             <Typography sx={{ mt: 2 }}>
               <Link to="/">
-                <i class="fas fa-home"></i>Home
+                <i className="fas fa-home"></i>Home
               </Link>
             </Typography>
             {admin || (
               <Box>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/pay`}>
-                    <i class="fas fa-credit-card"></i>Pay
+                    <i className="fas fa-credit-card"></i>Pay
                   </Link>
                 </Typography>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/my-orders`}>
-                    <i class="fas fa-shopping-bag"></i>My Orders
+                    <i className="fas fa-shopping-bag"></i>My Orders
                   </Link>
                 </Typography>
                 <Typography sx={{ mt: 2 }}>
                   <Link to={`${url}/review`}>
-                    <i class="far fa-star"></i>Review
+                    <i className="far fa-star"></i>Review
                   </Link>
                 </Typography>
               </Box>
@@ -217,7 +216,7 @@ function ResponsiveDrawer(props) {
               onClick={handleLogout}
               sx={{ mt: 2, cursor: "pointer" }}
             >
-              <i class="fas fa-sign-out-alt"></i>LogOut
+              <i className="fas fa-sign-out-alt"></i>LogOut
             </Typography>
           </Box>
         </Drawer>
@@ -232,28 +231,28 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <Switch>
-          <Route exact path={`${path}`}>
+          <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route>
-          <Route exact path={`${path}/review`}>
+          <Route path={`${path}/review`}>
             <UserReview></UserReview>
           </Route>
-          <Route exact path={`${path}/my-orders`}>
+          <Route path={`${path}/my-orders`}>
             <MyOrders></MyOrders>
           </Route>
-          <Route exact path={`${path}/pay`}>
+          <Route path={`${path}/pay`}>
             <Pay></Pay>
           </Route>
-          <AdminRoute exact path={`${path}/make-admin`}>
+          <AdminRoute path={`${path}/make-admin`}>
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
-          <AdminRoute exact path={`${path}/add-product`}>
+          <AdminRoute path={`${path}/add-product`}>
             <AddProduct></AddProduct>
           </AdminRoute>
-          <AdminRoute exact path={`${path}/manage-products`}>
+          <AdminRoute path={`${path}/manage-products`}>
             <ManageProducts></ManageProducts>
           </AdminRoute>
-          <AdminRoute exact path={`${path}/manage-orders`}>
+          <AdminRoute path={`${path}/manage-orders`}>
             <ManageOrders></ManageOrders>
           </AdminRoute>
         </Switch>

@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const { isLoading, setIsLoading } = useAuth();
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://floating-meadow-68096.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         setAllOrders(data);
@@ -18,7 +18,7 @@ const ManageOrders = () => {
     const proceed = window.confirm("Are You Sure?");
     if (proceed) {
       setIsLoading(true);
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://floating-meadow-68096.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -42,7 +42,7 @@ const ManageOrders = () => {
         const updatedOrder = { ...singleOrder };
         updatedOrder.status = "Approved";
         setIsLoading(true);
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://floating-meadow-68096.herokuapp.com/orders/${id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",
@@ -75,9 +75,9 @@ const ManageOrders = () => {
 
   return (
     <div>
-      <h1 class="text-center my-5">All Orders</h1>
-      <table class="table">
-        <thead class="table-dark">
+      <h1 className="text-center my-5">All Orders</h1>
+      <table className="table">
+        <thead className="table-dark">
           <tr>
             <th scope="col">#</th>
             <th scope="col">Product Name</th>
@@ -87,7 +87,7 @@ const ManageOrders = () => {
         </thead>
         {/* </table> */}
         {allOrders.map((order, index) => (
-          // <table class="table table-bordered border-primary">
+          // <table className="table table-bordered border-primary">
           <tbody>
             <tr>
               <th scope="row">{index + 1}</th>
@@ -95,13 +95,13 @@ const ManageOrders = () => {
               <td>{order.userName}</td>
               <td>
                 <button
-                  class="btn btn-danger me-1"
+                  className="btn btn-danger me-1"
                   onClick={() => handleDelete(order._id)}
                 >
                   Delete
                 </button>
                 <button
-                  class="btn btn-success"
+                  className="btn btn-success"
                   onClick={() => handleUpdate(order._id)}
                 >
                   {order.status}

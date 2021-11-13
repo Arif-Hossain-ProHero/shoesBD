@@ -28,34 +28,34 @@ const Login = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div class="container  my-5">
+      <div className="container  my-5">
         {/* login section */}
-        <div class="row">
-          <div class="col-12 col-md-6">
+        <div className="row">
+          <div className="col-12 col-md-6">
             <h2 className="text-center">Login</h2>
             {error && <Alert severity="error">{error}</Alert>}
             <form onSubmit={handleSubmit}>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">
+              <div className="mb-3">
+                <label for="exampleFormControlInput1" className="form-label">
                   Email address
                 </label>
                 <input
                   type="email"
                   name="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="User Email"
                   onBlur={handleOnBlur}
                 />
               </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">
+              <div className="mb-3">
+                <label for="exampleFormControlInput1" className="form-label">
                   Password
                 </label>
                 <input
                   type="password"
                   name="password"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="User Password"
                   onBlur={handleOnBlur}
@@ -63,16 +63,16 @@ const Login = () => {
               </div>
 
               <Link to="/register">Need to Register?</Link>
-              <div class="text-center">
-                <button class="btn btn-primary">Login</button>
+              <div className="text-center">
+                <button className="btn btn-primary">Login</button>
               </div>
             </form>
           </div>
           {/* login poster */}
-          <div class="col-12 col-md-6">
+          <div className="col-12 col-md-6">
             <img
               src="https://cdn.dribbble.com/users/1018473/screenshots/5344535/login.png"
-              class="img-fluid"
+              className="img-fluid"
               alt=""
             />
           </div>

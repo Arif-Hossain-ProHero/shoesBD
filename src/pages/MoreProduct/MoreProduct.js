@@ -5,33 +5,33 @@ const MoreProduct = (props) => {
   const { name, img, description, rating, price, newProduct, _id } =
     props.product;
   return (
-    <div class="col">
-      <div class="card">
-        <img src={img} class="card-img-top card-img" alt="..." />
-        <div title="Add to Wish list" class="middle">
-          <div class="text">
-            <i class="fas fa-heart"></i>
+    <div className="col">
+      <div className="card">
+        <img src={img} className="card-img-top card-img" alt="..." />
+        <div title="Add to Wish list" className="middle">
+          <div className="text">
+            <i className="fas fa-heart"></i>
           </div>
         </div>
         {/* new produc */}
         {newProduct && (
-          <div class="text-block">
+          <div className="text-block">
             <p>NEW</p>
           </div>
         )}
-        <div class="card-body text-center">
-          <h5 class="card-title">{name}</h5>
-          <p class="card-text">{description.slice(0, 40)}...</p>
+        <div className="card-body text-center">
+          <h5 className="card-title">{name}</h5>
+          <p className="card-text">{description.slice(0, 40)}...</p>
         </div>
         <div>
-          <div class="price text-center">
-            <h3 class="fw-bold">${price}</h3>
+          <div className="price text-center">
+            <h3 className="fw-bold">${price}</h3>
             <Rating name="read-only" value={rating} precision={0.5} readOnly />
           </div>
           <div>
             <Link to={`/products/${_id}`}>
-              <button class="w-100 btn btn-warning">
-                <i class="fas fa-shopping-cart"></i>Buy Now
+              <button className="w-100 btn btn-warning">
+                <i className="fas fa-shopping-cart"></i>Buy Now
               </button>
             </Link>
           </div>

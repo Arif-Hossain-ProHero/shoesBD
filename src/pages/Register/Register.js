@@ -31,72 +31,72 @@ const Register = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div class="container  my-5">
+      <div className="container  my-5">
         {/* login section */}
-        <div class="row">
-          <div class="col-12 col-md-6">
+        <div className="row">
+          <div className="col-12 col-md-6">
             <h2 className="text-center">Register</h2>
             {error && <Alert severity="error">{error}</Alert>}
             <form onSubmit={handleSubmit}>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
                   for="exampleFormControlInput1"
-                  class="form-label text-primary"
+                  className="form-label text-primary"
                 >
                   User Name
                 </label>
                 <input
                   type="text"
                   name="name"
-                  class="form-control"
+                  className="form-control"
                   onBlur={handleOnBlur}
                   id="exampleFormControlInput1"
                   placeholder="User Name"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
                   for="exampleFormControlInput1"
-                  class="form-label text-primary"
+                  className="form-label text-primary"
                 >
                   Email address
                 </label>
                 <input
                   type="email"
                   name="email"
-                  class="form-control"
+                  className="form-control"
                   onBlur={handleOnBlur}
                   id="exampleFormControlInput1"
                   placeholder="User Email"
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
                   for="exampleFormControlInput1"
-                  class="form-label text-primary"
+                  className="form-label text-primary"
                 >
                   Password
                 </label>
                 <input
                   type="password"
                   name="password"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="User Password"
                   onBlur={handleOnBlur}
                 />
               </div>
-              <div class="mb-3">
+              <div className="mb-3">
                 <label
                   for="exampleFormControlInput1"
-                  class="form-label text-primary"
+                  className="form-label text-primary"
                 >
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   name="password2"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Confirm Password"
                   onBlur={handleOnBlur}
@@ -104,18 +104,18 @@ const Register = () => {
               </div>
 
               <Link to="/login">Already Registered?</Link>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">
+              <div className="text-center">
+                <button type="submit" className="btn btn-primary">
                   Register
                 </button>
               </div>
             </form>
           </div>
           {/* login poster */}
-          <div class="col-12 col-md-6">
+          <div className="col-12 col-md-6">
             <img
               src="https://cdn.dribbble.com/users/1018473/screenshots/5344535/login.png"
-              class="img-fluid"
+              className="img-fluid"
               alt=""
             />
           </div>

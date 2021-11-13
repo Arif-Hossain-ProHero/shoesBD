@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   };
   const handleOnSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://floating-meadow-68096.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -26,14 +26,14 @@ const MakeAdmin = () => {
   };
   return (
     <div>
-      <h2 class="text-center my-5">Make Admin</h2>
+      <h2 className="text-center my-5">Make Admin</h2>
       {success && <Alert severity="success">Email Added Successfully.</Alert>}
       <form className="text-center" onSubmit={handleOnSubmit}>
         <div className="d-flex flex-row justify-content-center">
           <input
             type="email"
             name="email"
-            class="form-control w-50"
+            className="form-control w-50"
             onBlur={handleOnBlur}
             id="exampleFormControlInput1"
             placeholder="User Email"

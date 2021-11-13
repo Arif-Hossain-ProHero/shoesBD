@@ -17,7 +17,7 @@ const Purchase = () => {
   const phoneRef = useRef();
 
   useEffect(() => {
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://floating-meadow-68096.herokuapp.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -47,7 +47,7 @@ const Purchase = () => {
       status: "pending",
     };
     console.log(orderDetail);
-    const url = "http://localhost:5000/orders";
+    const url = "https://floating-meadow-68096.herokuapp.com/orders";
     fetch(url, {
       method: "POST",
       headers: {

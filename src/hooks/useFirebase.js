@@ -46,7 +46,11 @@ const useFirebase = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-        history.replace(redirect);
+        if (admin) {
+          history.replace("/dashboard");
+        } else {
+          history.replace(redirect);
+        }
       })
       .catch((error) => {
         setError(error.message);
@@ -57,14 +61,15 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       } else {
         setUser({});
       }
-      setIsLoading(false);
     });
+    setIsLoading(false);
     return () => unSubscribe;
   }, []);
 
@@ -74,7 +79,7 @@ const useFirebase = () => {
       email: email,
       displayName: name,
     };
-    fetch("http://localhost:5000/users", {
+    fetch("https://floating-meadow-68096.herokuapp.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -88,7 +93,7 @@ const useFirebase = () => {
   //check isAdmin
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://floating-meadow-68096.herokuapp.com/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);

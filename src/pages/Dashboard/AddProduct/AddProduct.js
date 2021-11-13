@@ -13,7 +13,7 @@ const AddProduct = () => {
     const img = imageRef.current.value;
 
     const newProducts = { name: title, description, price, img };
-    fetch("http://localhost:5000/products", {
+    fetch("https://floating-meadow-68096.herokuapp.com/products", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -9,6 +9,7 @@ import Purchase from "./pages/Purchase/Purchase";
 import AuthProvider from "./context/AuthProvider";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -18,24 +19,27 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
           </Route>
-          <Route path="/more-products">
+          <Route exact path="/more-products">
             <MoreProducts></MoreProducts>
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login></Login>
           </Route>
-          <Route path="/register">
+          <Route exact path="/register">
             <Register></Register>
           </Route>
           <Route path="/dashboard">
             <Dashboard></Dashboard>
           </Route>
-          <PrivateRoute path="/products/:id">
+          <PrivateRoute exact path="/products/:id">
             <Purchase></Purchase>
           </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
       </BrowserRouter>
     </AuthProvider>

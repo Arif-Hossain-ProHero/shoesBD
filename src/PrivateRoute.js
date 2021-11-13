@@ -1,10 +1,10 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Redirect, Route } from "react-router-dom";
 import useAuth from "./hooks/useAuth";
 
 const PrivateRoute = ({ children, ...rest }) => {
   const { user, isLoading } = useAuth();
-  if (isLoading) {
+  if (!user.email) {
     return (
       <div className="d-flex justify-content-center my-24">
         <div className="spinner-border" role="status">
@@ -20,15 +20,10 @@ const PrivateRoute = ({ children, ...rest }) => {
         user.email ? (
           children
         ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: location },
-            }}
-          />
+          <Redirect to={{ pathname: "/login", state: { from: location } }} />
         )
       }
-    />
+    ></Route>
   );
 };
 
