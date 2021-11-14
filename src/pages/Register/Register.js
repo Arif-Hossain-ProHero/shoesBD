@@ -13,13 +13,16 @@ const Register = () => {
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    console.log(field, value);
     let newRegistrationData = { ...registrationData };
     newRegistrationData[field] = value;
     setRegistrationData(newRegistrationData);
   };
 
   const handleSubmit = (e) => {
+    if (registrationData.password !== registrationData.password2) {
+      alert("Password Doesn't Match.");
+      return;
+    }
     createUser(
       registrationData.email,
       registrationData.password,
@@ -40,7 +43,7 @@ const Register = () => {
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label
-                  for="exampleFormControlInput1"
+                  htmlFor="exampleFormControlInput1"
                   className="form-label text-primary"
                 >
                   User Name
@@ -56,7 +59,7 @@ const Register = () => {
               </div>
               <div className="mb-3">
                 <label
-                  for="exampleFormControlInput1"
+                  htmlFor="exampleFormControlInput1"
                   className="form-label text-primary"
                 >
                   Email address
@@ -72,7 +75,7 @@ const Register = () => {
               </div>
               <div className="mb-3">
                 <label
-                  for="exampleFormControlInput1"
+                  htmlFor="exampleFormControlInput1"
                   className="form-label text-primary"
                 >
                   Password
@@ -88,7 +91,7 @@ const Register = () => {
               </div>
               <div className="mb-3">
                 <label
-                  for="exampleFormControlInput1"
+                  htmlFor="exampleFormControlInput1"
                   className="form-label text-primary"
                 >
                   Confirm Password

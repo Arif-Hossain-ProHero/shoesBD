@@ -38,7 +38,10 @@ const AddProduct = () => {
           <div className="container mx-auto row row-cols-1 row-cols-md-2 g-4">
             {/* title */}
             <div className="mb-3 col">
-              <label htmlFor="exampleFormControlInput1" className="form-label">
+              <label
+                htmlhtmlFor="exampleFormControlInput1"
+                className="form-label"
+              >
                 Product Title
               </label>
               <input
@@ -52,7 +55,10 @@ const AddProduct = () => {
             </div>
             {/* price */}
             <div className="mb-3 col">
-              <label htmlFor="exampleFormControlInput1" className="form-label">
+              <label
+                htmlhtmlFor="exampleFormControlInput1"
+                className="form-label"
+              >
                 Product Price
               </label>
               <input
@@ -66,7 +72,10 @@ const AddProduct = () => {
             </div>
             {/* Image Url */}
             <div className="mb-3 col">
-              <label htmlFor="exampleFormControlInput1" className="form-label">
+              <label
+                htmlhtmlFor="exampleFormControlInput1"
+                className="form-label"
+              >
                 Image URL
               </label>
               <input
@@ -80,7 +89,10 @@ const AddProduct = () => {
             </div>
             {/* Description */}
             <div className="mb-3 col">
-              <label htmlFor="exampleFormControlInput1" className="form-label">
+              <label
+                htmlhtmlFor="exampleFormControlInput1"
+                className="form-label"
+              >
                 Description
               </label>
               <textarea

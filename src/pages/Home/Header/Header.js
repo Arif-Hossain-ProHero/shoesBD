@@ -54,7 +54,7 @@ const Header = () => {
                       ONLY ON <span className="text-danger">SHOESBD</span>
                     </h3>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center pb-1">
                     <Link to="/more-products">
                       <button className="btn btn-primary">More Products</button>
                     </Link>
@@ -74,18 +74,19 @@ const Header = () => {
                   />
                 </div>
                 <div className="col">
-                  <div className="my-4 text-center">
-                    <h1 className="fw-bold fs-1 text-warning mb-3">
-                      MEGA OFFER
-                    </h1>
-                    <h3>20% OFF for Today</h3>
+                  <div className="my-4 text-center ">
+                    <h1 className="fw-bold fs-1 text-warning mb-3">BIG SALE</h1>
+                    <h3>
+                      SAVE UPTO <span className="fs-1 text-primary">20%</span>{" "}
+                      FOR BOY'S SNEAKER
+                    </h3>
                     <h3 className=" my-3">
                       ONLY ON <span className="text-danger">SHOESBD</span>
                     </h3>
                   </div>
-                  <div className="text-center">
+                  <div className="text-center pb-1">
                     <Link to="/more-products">
-                      <button className="btn btn-primary">More Products</button>
+                      <button className="btn btn-warning">BUY NOW</button>
                     </Link>
                   </div>
                 </div>

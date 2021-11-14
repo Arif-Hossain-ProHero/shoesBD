@@ -53,11 +53,16 @@ const MyOrders = () => {
             <tr>
               <th scope="row">{index + 1}</th>
               <td>{order.title}</td>
-              <td>{order.price}</td>
+              <td>${order.price}</td>
               <td>{order.date}</td>
               <td>
-                <button>{order.status}</button>
-                <button onClick={() => handleDelete(order._id)}>Delete</button>
+                <button className="btn btn-success me-1">{order.status}</button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => handleDelete(order._id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           </tbody>

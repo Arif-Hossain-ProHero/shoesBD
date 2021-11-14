@@ -37,7 +37,7 @@ const UserReview = () => {
       <h1 className="text-center">Review</h1>
       <form className="mx-auto w-75" onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
+          <label htmlFor="exampleFormControlInput1" className="form-label">
             Review Headline
           </label>
           <input
@@ -50,7 +50,7 @@ const UserReview = () => {
           />
         </div>
         <div className="mb-3">
-          <label for="exampleFormControlTextarea1" className="form-label">
+          <label htmlFor="exampleFormControlTextarea1" className="form-label">
             Leave your review here
           </label>
           <textarea
@@ -63,7 +63,7 @@ const UserReview = () => {
           ></textarea>
         </div>
         <div className="mb-3">
-          <label for="exampleFormControlInput1" className="form-label">
+          <label htmlFor="exampleFormControlInput1" className="form-label">
             Give Rating
           </label>
           <input
@@ -77,7 +77,11 @@ const UserReview = () => {
             onBlur={handleOnBlur}
           />
         </div>
-        <input type="submit" value="Submit Review" />
+        <input
+          className="btn btn-primary"
+          type="submit"
+          value="Submit Review"
+        />
       </form>
     </div>
   );

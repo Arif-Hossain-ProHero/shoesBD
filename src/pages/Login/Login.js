@@ -36,7 +36,10 @@ const Login = () => {
             {error && <Alert severity="error">{error}</Alert>}
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                <label for="exampleFormControlInput1" className="form-label">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
                   Email address
                 </label>
                 <input
@@ -49,7 +52,10 @@ const Login = () => {
                 />
               </div>
               <div className="mb-3">
-                <label for="exampleFormControlInput1" className="form-label">
+                <label
+                  htmlFor="exampleFormControlInput1"
+                  className="form-label"
+                >
                   Password
                 </label>
                 <input

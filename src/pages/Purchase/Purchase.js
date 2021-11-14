@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import useAuth from "../../hooks/useAuth";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
+import Rating from "@mui/material/Rating";
 
 const Purchase = () => {
   const { id } = useParams();
@@ -76,7 +77,7 @@ const Purchase = () => {
               {/* user name */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   User Name
@@ -94,7 +95,7 @@ const Purchase = () => {
               {/* email */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Email
@@ -112,7 +113,7 @@ const Purchase = () => {
               {/* address */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Address
@@ -130,7 +131,7 @@ const Purchase = () => {
               {/* phone */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Phone Number
@@ -148,7 +149,7 @@ const Purchase = () => {
               {/* date */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Date
@@ -166,7 +167,7 @@ const Purchase = () => {
               {/* pacakge title */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Package Title
@@ -184,7 +185,7 @@ const Purchase = () => {
               {/* price */}
               <div className="mb-3">
                 <label
-                  htmlFor="exampleFormControlInput1"
+                  htmlhtmlFor="exampleFormControlInput1"
                   className="form-label"
                 >
                   Price
@@ -219,7 +220,8 @@ const Purchase = () => {
             </h5>
             <p>
               <span className="text-success pe-2">Ratings:</span>
-              {product.rating}{" "}
+
+              {product.rating}
             </p>
           </div>
         </div>

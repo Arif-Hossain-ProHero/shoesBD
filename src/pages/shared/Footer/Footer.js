@@ -35,7 +35,7 @@ const Footer = () => {
             <h3 className="text-center text-white">SEND FEEDBACK</h3>
             <div className="mb-3">
               <label
-                htmlFor="exampleFormControlInput1"
+                htmlhtmlFor="exampleFormControlInput1"
                 className="form-label text-white"
               >
                 Email address
@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="mb-3">
               <label
-                htmlFor="exampleFormControlTextarea1"
+                htmlhtmlFor="exampleFormControlTextarea1"
                 className="form-label text-white"
               >
                 Feedback

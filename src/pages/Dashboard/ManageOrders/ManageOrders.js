@@ -12,7 +12,7 @@ const ManageOrders = () => {
       .then((data) => {
         setAllOrders(data);
       });
-  }, []);
+  }, [allOrders]);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are You Sure?");

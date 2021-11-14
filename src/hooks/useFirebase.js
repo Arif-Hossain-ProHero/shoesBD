@@ -46,11 +46,7 @@ const useFirebase = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-        if (admin) {
-          history.replace("/dashboard");
-        } else {
-          history.replace(redirect);
-        }
+        history.push(redirect);
       })
       .catch((error) => {
         setError(error.message);

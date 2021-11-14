@@ -79,7 +79,7 @@ const Navbar = () => {
                   <span>
                     <i className="fas fa-user"></i>
                   </span>
-                  {user.email ? user.displayName.toUpperCase() : ""}
+                  {user.email ? user.displayName : ""}
                 </div>
               </div>
             </div>
