@@ -1,12 +1,24 @@
 .carousel-img {
-  max-height: 400px;
+  height: 100%;
 }
 .carousel-bg {
   background-color: coral;
+  height: 80vh;
 }
 .carousel-bg-3 {
   background-color: rgb(9, 121, 141);
+  height: 80vh;
 }
-* {
-  box-sizing: border-box;
+
+@media only screen and (max-width: 768px) {
+  .carousel-img {
+    display: none;
+  }
+  .carousel-description {
+    width: 100%;
+  }
+  .carousel-bg,
+  .carousel-bg-3 {
+    height: 70vh;
+  }
 }

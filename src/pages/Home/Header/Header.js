@@ -44,7 +44,7 @@ const Header = () => {
                     alt=""
                   />
                 </div>
-                <div className="col">
+                <div className="col d-flex flex-column justify-content-center align-items-center carousel-description">
                   <div className="my-4 text-center">
                     <h1 className="fw-bold fs-1 text-warning mb-3">
                       MEGA OFFER
@@ -66,14 +66,7 @@ const Header = () => {
           <div className="carousel-item">
             <div className="container-fluid mx-auto">
               <div className="row row-cols-2  carousel-bg">
-                <div className="col">
-                  <img
-                    className="img-fluid carousel-img"
-                    src="https://xeroshoes.com/wp-content/themes/xeroshoes/assets/images/menu/xero-shoes-PRM-LNR_Prio-Lunar_LS.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="col">
+                <div className="col d-flex flex-column justify-content-center align-items-center carousel-description">
                   <div className="my-4 text-center ">
                     <h1 className="fw-bold fs-1 text-warning mb-3">BIG SALE</h1>
                     <h3>
@@ -90,6 +83,13 @@ const Header = () => {
                     </Link>
                   </div>
                 </div>
+                <div className="col">
+                  <img
+                    className="img-fluid carousel-img"
+                    src="https://xeroshoes.com/wp-content/themes/xeroshoes/assets/images/menu/xero-shoes-PRM-LNR_Prio-Lunar_LS.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@ const Header = () => {
                     alt=""
                   />
                 </div>
-                <div className="col">
+                <div className="col d-flex flex-column justify-content-center align-items-center carousel-description">
                   <div className="my-5 text-white">
                     <h1>
                       KEEP MOVIENG WITH{" "}
