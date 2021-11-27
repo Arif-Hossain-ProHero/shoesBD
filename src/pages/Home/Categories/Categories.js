@@ -11,7 +11,7 @@ const Categories = () => {
             <div className="card category-img shadow p-3 mb-5 bg-body rounded">
               <div className=" overflow-hidden">
                 <img
-                  src="https://ebaay.net/images/71RYoWpzMEL._AC_UL1200_.jpg"
+                  src="https://www.mensjournal.com/wp-content/uploads/2021/04/Toms1.jpg"
                   className="card-img-top"
                   alt="..."
                 />
