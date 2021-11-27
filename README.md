@@ -1,4 +1,4 @@
-# Welcome to - NICE TRIP Tourism
+# Welcome to - ShoesBD
 
 ---
 
@@ -6,10 +6,26 @@ Hi, I'm **Arif Hossain** , CEO of "SHOESBD". It's the best shoe Website around i
 
 ### **Visit Our Site** [SHOESBD ](https://shoesbd-543e7.web.app/)
 
-## _Our Speciality:_
+## _Website Overview:_
 
-- 'SHOESBD' offers you the best QUALITY Shoes.
-- Here you can Buy KIDS, BOYS, OLD MAN'S & Woemn Shoes.
-- Quick delivery around Bangladesh.
-- All products are New and Latest.
-- Brand Collection Available
+- A fully functional, full-stack app based on MERN
+- User can order shoe and give review if authenticate
+- Having an Admin panel where admin can manage CRUD operations
+- User can Manage his/her orders and do payment on Payment page.
+- An Admin will see different UI under dashboard page.
+- Admin can make another user as an admin.
+- Site is deployed in Firebase.
+- Server is deployed in Heroku.
+
+### Technologies
+
+ShoesBD uses a number of open source projects to work properly:
+
+- React
+- Express.js
+- Node.js
+- MongoDB
+- MaterialUI
+- Bootstrap
+- Firebase authentication
+- Heroku
